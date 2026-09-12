@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethical Guidelines for School Librarians: The ALA Core Values Statement in Context, in History, and in Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #EDE6D6;
+    --ledger: #1F2A24;
+    --ledger-light: #2C3B33;
+    --brass: #8A6F3B;
+    --brass-light: #B79A5E;
+    --ink: #2B2620;
+    --paper-shadow: #C9BFA0;
+    --card-surface: #F7F3E9;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    padding: 48px 24px 80px;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--brass);
+    padding-bottom: 24px;
+  }
+
+  .kicker {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--brass);
+    margin: 0 0 6px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: var(--ledger);
+  }
+
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--brass);
+    margin: 0 0 16px;
+  }
+
+  header p {
+    font-size: 1.02rem;
+    line-height: 1.55;
+    max-width: 60ch;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  header p.cta {
+    margin-top: 14px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--brass);
+  }
+
+  a.doc-link {
+    color: var(--brass);
+    text-decoration: underline;
+    text-decoration-color: var(--paper-shadow);
+    text-underline-offset: 2px;
+  }
+
+  a.doc-link:hover {
+    color: var(--ledger);
+    text-decoration-color: var(--brass);
+  }
+
+  .drawers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .drawer {
+    background: var(--ledger);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+  }
+
+  .drawer-head {
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .tab {
+    flex: 0 0 56px;
+    background: var(--brass);
+    color: var(--ledger);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+
+  .tab svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--ledger);
+  }
+
+  .drawer-head:hover .tab {
+    background: var(--brass-light);
+  }
+
+  .head-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+  }
+
+  .head-label h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--parchment);
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+
+  .indicator {
+    color: var(--brass-light);
+    font-size: 1.3rem;
+    line-height: 1;
+    transform: rotate(0deg);
+    transition: transform 0.35s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .drawer.open .indicator {
+    transform: rotate(45deg);
+  }
+
+  .drawer.open .drawer-head {
+    background: var(--ledger-light);
+  }
+
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--card-surface);
+  }
+
+  .panel-inner {
+    padding: 26px 28px 24px;
+    border-top: 1px solid var(--paper-shadow);
+  }
+
+  .panel-inner h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--brass);
+    margin: 22px 0 10px;
+  }
+
+  .panel-inner h3:first-child {
+    margin-top: 0;
+  }
+
+  .panel-inner p {
+    font-size: 1.03rem;
+    line-height: 1.65;
+    margin: 0 0 16px;
+    max-width: 66ch;
+    color: var(--ink);
+  }
+
+  .panel-inner p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  sup.cite {
+    color: var(--brass);
+    font-weight: 600;
+    cursor: default;
+  }
+
+  .footnotes {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--paper-shadow);
+    font-size: 0.85rem;
+    color: var(--brass);
+    line-height: 1.6;
+  }
+
+  .footnotes div {
+    margin-bottom: 4px;
+  }
+
+  .placeholder-flag {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--paper-shadow);
+    background: var(--ledger);
+    padding: 3px 9px;
+    border-radius: 2px;
+  }
+
+  .subcards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .subcard {
+    border: 1px solid var(--paper-shadow);
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--parchment);
+  }
+
+  .subcard-head {
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .sub-tab {
+    flex: 0 0 38px;
+    background: transparent;
+    border-right: 1px solid var(--paper-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sub-tab svg {
+    width: 13px;
+    height: 13px;
+    fill: var(--brass);
+  }
+
+  .subcard-head .head-label {
+    padding: 12px 16px;
+  }
+
+  .subcard-head .head-label h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 0.98rem;
+    color: var(--ledger);
+    margin: 0;
+  }
+
+  .subcard-head .indicator {
+    color: var(--brass);
+    font-size: 1.1rem;
+  }
+
+  .subcard.open .sub-tab svg {
+    fill: var(--ledger);
+  }
+
+  .subcard.open .subcard-head {
+    background: var(--brass-light);
+  }
+
+  .subcard.open .head-label h3 {
+    color: var(--ledger);
+  }
+
+  .subpanel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--card-surface);
+  }
+
+  .subpanel-inner {
+    padding: 18px 18px 16px;
+    border-top: 1px solid var(--paper-shadow);
+  }
+
+  .subpanel-inner p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 14px;
+    max-width: 64ch;
+    color: var(--ink);
+  }
+
+  .subpanel-inner p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .subpanel-inner .footnotes {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--brass);
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .panel, .indicator, .drawer, .tab { transition: none !important; }
+  }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 1.6rem; }
+    .tab { flex-basis: 44px; font-size: 1.05rem; }
+    .head-label { padding: 14px 14px; }
+    .head-label h2 { font-size: 0.98rem; }
+    .panel-inner { padding: 20px 16px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="kicker">A resource for future school librarians</p>
+    <h1>Ethical Guidelines for School Librarians</h1>
+    <p class="subtitle">The ALA Core Values Statement in Context, in History, and in Practice</p>
+    <p>This webtool is an orientation and exploration for the meaning and utility of the American Library Association's <a class="doc-link" href="https://www.ala.org/advocacy/advocacy/intfreedom/corevalues" target="_blank" rel="noopener">Core Values Statement</a>, originally adopted in 2004 and subsequently revised by the ALA in 2024. The descriptions here place the Core Values Statement in context alongside the ALA's 1953 Freedom to Read Statement and the historical principles that shaped them both, along with an investigation of some of the practical implications and recommendations for school librarianship today.</p>
+    <p class="cta">Click any drawer to open it.</p>
+  </header>
+
+  <div class="drawers" id="drawers">
+
+    <div class="drawer">
+      <div class="drawer-head">
+        <div class="tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+        <div class="head-label">
+          <h2>Historical Foundations of Librarianship's Guiding Principles</h2>
+          <span class="indicator">+</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-inner">
+          <p>In the 1930s, as fascism was rising in Europe, librarians in the United States, watching in alarm as intellectual freedom was eroded by book bans and other structural applications of censorship, sought to formalize a series of unifying ethical guidelines to ensure that librarians had a framework and foundation from which to fight back against efforts to control information. To lay out these principles, the ALA in 1939 produced two documents, the Code of Ethics and the Library Bill of Rights, codifying the set of beliefs that would guide the profession as it acted as a bulwark to protect intellectual freedom and combat censorship.<sup class="cite">1</sup></p>
+          <p>As the technology and information practices of librarianship have evolved over time, so too has the guidance set forth by the ALA. The ethical principles established by the core ALA documents in the 1930s do not serve as a static monolith and have been amended and updated to reflect the changing needs of patron populations and the librarians that serve them. Updates to these documents follow developments in technology, society norms, and the information needs of our communities. An example of how these documents have been updated to match the changing needs of our society would be the 2019 addition of a seventh article to the Library Bill of Rights, specifically addressing and reaffirming the right to privacy and confidentiality regarding library use information and data.<sup class="cite">2</sup> Before our modern era of mass surveillance and the commodification and strip mining of big data, such an update may not have been necessary, but the dynamic nature of the ALA's guidance allows space for this sort of change. Beyond amending existing documents, the ALA has produced additional guidelines and statements in response to the needs of the moments. In 1953, as a response to Red Scare censorship and McCarthyism, the ALA adopted the Freedom to Read Statement, which was last amended in 2004.<sup class="cite">3</sup> The Freedom to Read statement details the commitment of librarians and librarianship to intellectual freedom, affirms the rights of patrons and community members to access information, and stresses the importance of unbiased stewardship and curation of information by the professional class of librarians. The Freedom to Read statement acknowledged that "the freedom to read is essential to our democracy" and, in words that resonate today as much as they did 70 years ago, reminding us that even in the United States, intellectual freedom is "continuously under attack."<sup class="cite">3</sup></p>
+          <div class="footnotes">
+            <div><sup>1</sup> Garnar, M. L. (2022). Information ethics. In S. Hirsh (Ed.), <em>Information Services Today</em> (3rd ed., pp. 407–418). Rowman &amp; Littlefield.</div>
+            <div><sup>2</sup> American Library Association. (2019). <em>Library bill of rights.</em> https://www.ala.org/advocacy/intfreedom/librarybill</div>
+            <div><sup>3</sup> American Library Association. (2004). <em>The freedom to read statement.</em> https://www.ala.org/advocacy/intfreedom/freedomreadstatement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer">
+      <div class="drawer-head">
+        <div class="tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+        <div class="head-label">
+          <h2>Core Values of Librarianship: Purpose &amp; Key Principles</h2>
+          <span class="indicator">+</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-inner">
+          <p>In 2004, the ALA adopted another guiding document, updated again in 2024, called the Core Values of Librarianship, which lists the "rights that [librarians] seek to protect and the ethical guidelines [they] look to for direction."<sup class="cite">1</sup> The purpose of this document is, in part, to declare an "essential set of core values which define, inform, and guide all professional practice."<sup class="cite">1</sup> As resource constraints become a greater part of every school librarian's day-to-day experience and we witness a troubling resurgence of book bans and information-limiting tactics throughout the United States, these core values offer northstar guidance that can be applied to nearly every scenario. They are, as Deborah Caldwell-Stone notes, "ideas, and at the same time, they are standards to determine whether an action by an organization or individual measures up to those ideals."<sup class="cite">2</sup> When navigating the complex responsibilities of modern school librarianship, professionals can default back to these values when determining if their course of action is appropriate and aligned with the ethical practices of the field. Along with sustainability and serving as a public good, chief among these core values are intellectual freedom, access, equity, and the right to privacy.<sup class="cite">1</sup></p>
+          <div class="footnotes">
+            <div><sup>1</sup> American Library Association. (2024). <em>Core values of librarianship.</em> https://www.ala.org/advocacy/advocacy/intfreedom/corevalues</div>
+            <div><sup>2</sup> Caldwell-Stone, D. (2022). Intellectual freedom. In S. Hirsh (Ed.), <em>Information Services Today</em> (3rd ed., pp. 471–485). Rowman &amp; Littlefield.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer">
+      <div class="drawer-head">
+        <div class="tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+        <div class="head-label">
+          <h2>Important Concepts &amp; Provisions</h2>
+          <span class="indicator">+</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-inner">
+          <div class="subcards">
+
+            <div class="subcard">
+              <div class="subcard-head">
+                <div class="sub-tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+                <div class="head-label">
+                  <h3>Intellectual Freedom</h3>
+                  <span class="indicator">+</span>
+                </div>
+              </div>
+              <div class="subpanel">
+                <div class="subpanel-inner">
+                  <p>Protecting intellectual freedom – "the rights of library users to read, seek information, and speak freely" – is critical to the unifying ethical framework of professional librarians, who serve as a counterbalance against actors in civil society who work to control the flow of information in ways that influence beliefs and stoke prejudice.<sup class="cite">1</sup> Librarians must also be aware that censorship has forms beyond traditional book bans, manifesting in subtle, structural ways such as limiting the types of material that are eligible for databases, or by limiting the websites and technologies that students are able to access. While what is not included on library shelves and in collections generates headlines and attention, the processes for determining what is included are just as important. Developing unambiguous policies that center learners and equity while promoting transparent collection development and information resource management – policies that welcome and incorporate a broad range of viewpoints into school library materials – helps librarians build a buffer against ideologues who seek to use censorship to further their objectives. The Freedom to Read statement makes it clear that "it is in the public interest for publishers and librarians to make available the widest diversity of views and expressions, including those that are unorthodox, unpopular, or considered dangerous by the majority."<sup class="cite">2</sup></p>
+                  <div class="footnotes">
+                    <div><sup>1</sup> American Library Association. (2025). <em>Intellectual freedom.</em> https://www.ala.org/advocacy/intfreedom</div>
+                    <div><sup>2</sup> American Library Association. (2004). <em>The freedom to read statement.</em> https://www.ala.org/advocacy/intfreedom/freedomreadstatement</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subcard">
+              <div class="subcard-head">
+                <div class="sub-tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+                <div class="head-label">
+                  <h3>Access</h3>
+                  <span class="indicator">+</span>
+                </div>
+              </div>
+              <div class="subpanel">
+                <div class="subpanel-inner">
+                  <p>For librarians, maintaining a professional information ecosystem congruent with the tenets of intellectual freedom only matters if patrons remain able to access that information. The ALA states, "access provides opportunities for everyone in the community to obtain library resources and services with minimal disruption."<sup class="cite">1</sup> It is incumbent on librarians to reduce barriers to access, ensuring that individuals, regardless of economic status, geographic location, or demographic characteristics, are able to take advantage of the benefits of library systems. Librarianship efforts to enhance access must also acknowledge the different types of resource asymmetries that exist in modern society. The "digital divide," a resource gap between those varying levels of technological capacity and literacy, remains a relatively new but ongoing challenge for librarians. The ALA has developed recent supplemental guidance related to digital access, stating, "provision of access to digital resources and services should follow the principles outlined in the Library Bill of Rights to ensure equitable access regardless of content or platform,"<sup class="cite">2</sup> which, in practice, means advocating for reduced or eliminated fees related to accessing digital media, and promoting the widespread dissemination of technology tools and instruction.</p>
+                  <div class="footnotes">
+                    <div><sup>1</sup> American Library Association. (2024). <em>Core values of librarianship.</em> https://www.ala.org/advocacy/advocacy/intfreedom/corevalues</div>
+                    <div><sup>2</sup> American Library Association. (2019). <em>Access to digital resources and services: an interpretation of the library bill of rights.</em> https://www.ala.org/advocacy/intfreedom/librarybill/interpretations/digital</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subcard">
+              <div class="subcard-head">
+                <div class="sub-tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+                <div class="head-label">
+                  <h3>Privacy</h3>
+                  <span class="indicator">+</span>
+                </div>
+              </div>
+              <div class="subpanel">
+                <div class="subpanel-inner">
+                  <p>Without an expectation of privacy, there are barriers to an individual's ability to have free access to information, ideas, and exposure to learning.<sup class="cite">1</sup> If a library patron believes that the data around their information seeking and information consumption may be shared without their consent, then it is possible that individuals may self-censor, which runs counter to librarianship core values of intellectual freedom and access.<sup class="cite">2</sup> The ALA has taken a direct stand on issues related to privacy, stating that "the possibility of surveillance, whether direct or through access to records of speech, research and exploration, undermines a democratic society."<sup class="cite">1</sup> To help librarians ensure that their patrons are protected and also imbued with the confidence needed to avoid self-censorship, the ALA has produced a series of Library Privacy Checklists that offer guidance on privacy across a range of library-situated domains.<sup class="cite">1</sup></p>
+                  <div class="footnotes">
+                    <div><sup>1</sup> American Library Association. (2021b). <em>Privacy.</em> https://www.ala.org/advocacy/privacy</div>
+                    <div><sup>2</sup> Givens, C. L. (2022). Information privacy and cybersecurity. In S. Hirsh (Ed.), <em>Information Services Today</em> (3rd ed., pp. 456–470). Rowman &amp; Littlefield.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer">
+      <div class="drawer-head">
+        <div class="tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+        <div class="head-label">
+          <h2>Implications for School Library Practice</h2>
+          <span class="indicator">+</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-inner">
+          <p>School librarians exist in an almost uniquely exposed position. They serve school communities but answer to a variety of stakeholders – from administrators to school boards to parents – and that exposure can differentiate them from the ways in which public and academic librarians operate. Putting the guiding principles of intellectual freedom into practice can mean, in a school library context, that a school librarian ends up on the front lines of navigating political pressure directly.</p>
+          <p>Additionally, school librarians must balance the rights of students to access information and the rights to student intellectual freedom with the fact that, as minors, parents and guardians may have their own (at times competing) rights and expectations for the information accessed by their children.</p>
+          <p>School librarians may also find barriers to the core values related to privacy given that elements like circulation records, database tracking, and software filters and logs may not be under the control of any one librarian, but may be managed or operated at the district level instead. And it's worth noting that student data may have additional legal implications, thanks to the U.S. Department of Education's Family Educational Rights and Privacy (FERPA) regulations.<sup class="cite">1</sup></p>
+          <p>Finally, the digital divide is a significant spectre looming over school environments. Device access, home internet service, and digital literacy are now widely varied among student populations and it may fall to school librarians to ensure that resources are available, usable, and understandable by all students in an equitable way.</p>
+          <div class="footnotes">
+            <div><sup>1</sup> U.S. Department of Education. (n.d.). <em>Family Educational Rights and Privacy Act (FERPA).</em> https://studentprivacy.ed.gov/ferpa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer">
+      <div class="drawer-head">
+        <div class="tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+        <div class="head-label">
+          <h2>Challenges, Tensions, and Areas of Debate</h2>
+          <span class="indicator">+</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-inner">
+          <p>In our current climate of book challenges and misinformation, it frequently feels like there is an inherent tension between the school librarian's desire to promote intellectual freedom, of making the widest range of viewpoints available, and expectations from community members and parents around the "appropriateness" of material for students.</p>
+          <p>It's worth noting that the 2024 Core Values update itself was contested by past ALA presidents, many of whom believed that the values were being watered down in the efforts to streamline them. As someone who was in library school in 2024, I appreciated being able to see the slimmed-down version as my first exposure to the Core Values, but I empathize with those who feel like the 2004 statement provided more comprehensive clarity.</p>
+          <p>The Children's Internet Protection Act of 2000, a federal regulation, often mandates filtering software for school networks and school libraries, which creates an inherent tension between the stark desire to avoid any form of censorship (e.g. the stance of the Library Bill of Rights) and the need to comply with legal regulations around internet control for minors.</p>
+          <p>I wish it weren't the case, but many school libraries are operating in an environment of ever-growing resource scarcity. And in that context, as budgets shrink and librarians are told to "do more with less," it can be hard to maintain a focus on equity and learner-centered library practices when positions or funding are imperiled.</p>
+          <p>We also live in times where taking a neutral stance on the state of the world can be viewed as supporting the status quo. Is it valid for school librarians to remain as neutral connectors, facilitating a passive connection between students and the information of the world? Or should school librarians, as they look at their core values and guiding principles, feel compelled to act in ways that connect students to a world of fairness, compassion, and justice?</p>
+          <p>Finally book challenges can now be the result of coordinated mass campaigns, the force of which can overwhelm any singular school librarian or district. How can school librarians organize and fight back when their backs are against the wall and their available resources are ever dwindling?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer">
+      <div class="drawer-head">
+        <div class="tab"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.09 6.26 6.91 1.01-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64l-5-4.87 6.91-1.01L12 1.5z"/></svg></div>
+        <div class="head-label">
+          <h2>Recommendations for School Librarians</h2>
+          <span class="indicator">+</span>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-inner">
+          <p>School librarians are more capable of providing services to students in ways that comport to the ALA's Core Values when there are clear, robust, learner- and equity-centered collection development and reconsideration policies. It is always better for school librarians to be proactive about protecting intellectual freedom.</p>
+          <p>Positive relationships with administrators and school boards will pay dividends for any school librarian. And the best time to start building those relationships are before things come to a boil. If we only engage during times of crisis, then relationships can become fraught and antagonistic and that seldom leads to good things for school libraries, librarians, and students.</p>
+          <p>Join and take active roles with collective organizing and advocacy groups, whether it's AASL, ALA, or, here in California, the CSLA. School librarians are often on an island, but the collective advocacy power can be a force multiplier for empowering librarians to follow the profession's ethical guidelines and practices.</p>
+          <p>Collections can be regularly audited with an equity and student-centered lens, not just in the perspective of maintaining legal compliance. And beyond books, school communities benefit when school librarians also think about the digital divide from an equity and access-focused perspective.</p>
+          <p>Privacy can be supported and maintained by school librarians advocating for low-intensity data retention practices for circulation records.</p>
+          <p>Finally, school librarians do themselves and their students a service when they maintain open, clear, transparent communication with parents, administration, and community members about selection criteria. This fits into the abovementioned need for proactivity; it's better to build trust in advance than try to repair a conflicted relationship.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>American Library Association · <a class="doc-link" href="https://www.ala.org/advocacy/advocacy/intfreedom/corevalues" target="_blank" rel="noopener">Core Values Statement</a>, adopted 2004 · revised 2024</footer>
+
+</div>
+
+<script>
+  const drawers = document.querySelectorAll('.drawer');
+
+  function syncPanelHeight(drawer) {
+    const panel = drawer.querySelector('.panel');
+    if (drawer.classList.contains('open')) {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  }
+
+  drawers.forEach(drawer => {
+    const head = drawer.querySelector('.drawer-head');
+    const panel = drawer.querySelector('.panel');
+
+    head.addEventListener('click', () => {
+      const isOpen = drawer.classList.contains('open');
+      drawers.forEach(d => {
+        d.classList.remove('open');
+        d.querySelector('.panel').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        drawer.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+
+    // Handle nested subcards, if any, inside this drawer's panel
+    const subcards = drawer.querySelectorAll('.subcard');
+    subcards.forEach(subcard => {
+      const subHead = subcard.querySelector('.subcard-head');
+      const subPanel = subcard.querySelector('.subpanel');
+
+      subHead.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isSubOpen = subcard.classList.contains('open');
+        subcards.forEach(sc => {
+          sc.classList.remove('open');
+          sc.querySelector('.subpanel').style.maxHeight = null;
+        });
+        if (!isSubOpen) {
+          subcard.classList.add('open');
+          subPanel.style.maxHeight = subPanel.scrollHeight + 'px';
+        }
+        // After the subpanel's own transition, the outer drawer panel
+        // also needs to grow or shrink to fit the new content height.
+        setTimeout(() => syncPanelHeight(drawer), 10);
+        subPanel.addEventListener('transitionend', () => syncPanelHeight(drawer), { once: true });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
